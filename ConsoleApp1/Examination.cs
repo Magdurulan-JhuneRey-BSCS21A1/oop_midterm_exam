@@ -45,7 +45,7 @@ public static class Examination
         student.Enroll(objectOrientedProgramming);
         score += AssertEqual(student.Courses.Count, 2, "Student should be enrolled in 2 courses");
         score += AssertTrue(student.Courses.Select(c => c.CourseName).Contains("Mathematics"), "Student courses should include 'Mathematics'");
-        score += AssertTrue(student.Courses.Select(c => c.CourseName).Contains("Physics"), "Student courses should include 'Mathematics'");
+        score += AssertTrue(student.Courses.Select(c => c.CourseName).Contains("Physics"), "Student courses should include 'Physics'");
         score += AssertTrue(!student.Courses.Contains(objectOrientedProgramming), "Student courses should not include 'OOP'");
 
         // 6. Examination - Invalid withdrawal (overdraft prevention)

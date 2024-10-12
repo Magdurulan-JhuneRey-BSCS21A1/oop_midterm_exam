@@ -8,12 +8,15 @@
         public Student(string? name )
         {
             StudentName = name;
+            Courses = new List<Course>();
         }
 
         public void Enroll(Course course)
         {
-            Courses = new List<Course>();
-            Courses.Add(course);
+            if (course.CourseName != "OOP")
+            {
+                Courses.Add(course);
+            }
         }
 
         public void ShowCourses()
@@ -32,7 +35,7 @@
     {
         public Course(string? name)
         {
-            
+            CourseName = name;
         }
         public string CourseName { get; }
     }

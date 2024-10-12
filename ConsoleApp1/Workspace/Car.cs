@@ -4,7 +4,7 @@
     {
         private readonly Engine _engine;
 
-        public bool IsEngineStarted { get; private set; } = false;
+        public bool IsEngineStarted { get; private set; } = true;
 
         public Car(Engine engine)
         {

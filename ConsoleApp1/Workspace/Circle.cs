@@ -1,17 +1,17 @@
 ﻿namespace ConsoleApp1.Exam
 {
-    public class Circle
+    public class Circle : IShape
     {
         public double Radius { get; set; }
 
         public double GetArea()
         {
-            return Radius;
+            return Math.PI*Radius*Radius;
         }
 
         public double GetPerimeter()
         {
-            return Radius;
+            return 2*Math.PI*Radius;
         }
     }
 
